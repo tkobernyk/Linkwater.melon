@@ -3,11 +3,13 @@ import './App.css'
 const profiles = [
   {
     name: 'Олена Кавун',
+    handle: '@olena_psychology',
     url: 'https://www.instagram.com/olena_psychology',
     avatarSrc: '/images/olena-avatar.jpg',
   },
   {
     name: 'Настя Думанська',
+    handle: '@anastasiia_dumanska_psy',
     url: 'https://www.instagram.com/anastasiia_dumanska_psy',
     avatarSrc: '/images/nastia-avatar.jpg',
   },
@@ -27,17 +29,24 @@ function App() {
   return (
     <main className="page-shell">
       <section className="profile-card" aria-labelledby="profile-title">
-        <div className="profile-content">
-          <div className="profile-heading">
-            <h1 id="profile-title">
-              Консультування
-              <span aria-hidden="true"> | </span>
-              <br className="heading-break" />
-              Психотерапія
-            </h1>
-            <p>Психологічне консультування, психотерапія</p>
+        <div className="profile-photo">
+          <div className="photo-topline">
+            <div className="practice-mark">
+              <span className="practice-mark__symbol" aria-hidden="true">
+                <img
+                  className="practice-mark__icon"
+                  src="/images/eye-of-horus.svg"
+                  alt=""
+                />
+              </span>
+              <span className="practice-mark__label">
+                Психологічна
+                <br />
+                практика
+              </span>
+            </div>
             <a
-              className="instagram-link"
+              className="photo-social"
               href={profiles[0].url}
               target="_blank"
               rel="noreferrer"
@@ -45,6 +54,26 @@ function App() {
             >
               <InstagramIcon />
             </a>
+          </div>
+          <p className="photo-caption">З турботою до себе</p>
+        </div>
+
+        <div className="profile-content">
+          <div className="profile-heading">
+            <p className="section-kicker">ПСИХОЛОГІЯ <span>·</span> ПСИХОТЕРАПІЯ</p>
+            <h1 id="profile-title">
+              Простір
+              <br />
+              для себе<span className="heading-period">.</span>
+            </h1>
+            <p className="profile-intro">
+              Дбайливе місце для розмови, підтримки й внутрішніх змін.
+            </p>
+          </div>
+
+          <div className="links-heading">
+            <span>Оберіть свого спеціаліста</span>
+            <span className="links-heading__count">01 — 02</span>
           </div>
 
           <nav className="profile-links" aria-label="Профілі в Instagram">
@@ -56,23 +85,24 @@ function App() {
                 rel="noreferrer"
                 key={profile.url}
               >
-                <img
-                  className="profile-avatar"
-                  src={profile.avatarSrc}
-                  alt=""
-                />
-                <span className="profile-link__name">{profile.name}</span>
-                <svg
-                  className="profile-link__arrow"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                >
-                  <path d="M5 10h10M10 5l5 5-5 5" />
-                </svg>
+                <img className="profile-avatar" src={profile.avatarSrc} alt="" />
+                <span className="profile-link__details">
+                  <span className="profile-link__name">{profile.name}</span>
+                  <span className="profile-link__handle">{profile.handle}</span>
+                </span>
+                <span className="profile-link__action" aria-hidden="true">
+                  <svg className="profile-link__arrow" viewBox="0 0 20 20">
+                    <path d="M4.5 10h10M10 5.5l4.5 4.5-4.5 4.5" />
+                  </svg>
+                </span>
               </a>
             ))}
           </nav>
-          <p className="profile-note">Оберіть профіль, щоб перейти в Instagram</p>
+
+          <p className="profile-note">
+            <InstagramIcon />
+            <span>Знайдіть нас в Instagram</span>
+          </p>
         </div>
       </section>
     </main>

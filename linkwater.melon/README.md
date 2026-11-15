@@ -11,6 +11,10 @@ Currently, two official plugins are available:
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Asset attribution
+
+The Eye of Horus SVG is by Jeff Dahl, from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Eye_of_Horus_bw.svg), and is used under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The symbol is recolored to `#F2F3F4`, and its negative spaces are transparent.
+
 ## Expanding the Oxlint configuration
 
 If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:

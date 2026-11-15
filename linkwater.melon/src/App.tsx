@@ -47,10 +47,10 @@ function App() {
             </div>
             <a
               className="photo-social"
-              href={profiles[0].url}
+              href="https://www.instagram.com/cabinet_psychology"
               target="_blank"
               rel="noreferrer"
-              aria-label="Instagram Олени Кавун"
+              aria-label="Instagram кабінету психологічної практики"
             >
               <InstagramIcon />
             </a>
